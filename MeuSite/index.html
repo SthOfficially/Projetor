@@ -1,81 +1,56 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Serviços de criação de sites com animações e efeitos interativos.">
-    <title>Criação de Sites</title>
-    <link rel="stylesheet" href="CSS/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meu Portfólio</title>
+  <link rel="stylesheet" href="CSS/style.css" />
 </head>
 <body>
-    <!-- Barra de Navegação -->
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <h1>Seu Nome</h1>
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
 
-    <!-- Seção Home -->
-    <section id="home" class="hero">
-        <div class="content">
-            <h1>Criação de Sites</h1>
-            <p>Transforme sua ideia em realidade com um site moderno e dinâmico!</p>
-            <a href="#servicos" class="cta-btn">Saiba Mais</a>
-        </div>
-    </section>
+  <section id="home">
+    <h2>Bem-vindo ao meu portfólio!</h2>
+    <p>Crio sites modernos, rápidos e funcionais com HTML, CSS e JavaScript.</p>
+  </section>
 
-    <!-- Seção Sobre -->
-    <section id="sobre">
-        <h2>Sobre Nós</h2>
-        <p>Somos especializados em criar sites com design responsivo, animações incríveis e interatividade.</p>
-    </section>
+  <section id="sobre">
+    <h2>Sobre Mim</h2>
+    <p>Sou desenvolvedor(a) front-end e adoro transformar ideias em sites bonitos e responsivos.</p>
+  </section>
 
-    <!-- Seção Serviços -->
-    <section id="servicos">
-        <h2>Nossos Serviços</h2>
-        <div class="service-card">
-            <div class="service-item">
-                <h3>Sites Institucionais</h3>
-                <p>Sites personalizados para empresas e negócios.</p>
-            </div>
-            <div class="service-item">
-                <h3>E-commerce</h3>
-                <p>Plataformas de e-commerce modernas e fáceis de usar.</p>
-            </div>
-            <div class="service-item">
-                <h3>Landing Pages</h3>
-                <p>Criação de páginas de captura e conversão de leads.</p>
-            </div>
-        </div>
-    </section>
+  <section id="projetos">
+    <h2>Meus Projetos</h2>
+    <div class="projetos">
+      <div class="projeto">
+        <h3>Projeto 1 - Cafeteria</h3>
+        <p>Site fictício feito para treinar HTML e CSS.</p>
+        <a href="https://github.com/seunome/cafeteria" target="_blank">Ver no GitHub</a>
+      </div>
+      <div class="projeto">
+        <h3>Projeto 2 - Galeria de Fotos</h3>
+        <p>Projeto simples com JavaScript para exibir imagens.</p>
+        <a href="https://github.com/seunome/galeria" target="_blank">Ver no GitHub</a>
+      </div>
+    </div>
+  </section>
 
-    <!-- Seção Contato -->
-    <section id="contato">
-        <h2>Entre em Contato</h2>
-        <p>Preencha o formulário abaixo para saber mais sobre nossos serviços!</p>
-        <form>
-            <input type="text" placeholder="Nome" required>
-            <input type="email" placeholder="E-mail" required>
-            <textarea placeholder="Mensagem" required></textarea>
-            <button type="submit">Enviar</button>
-        </form>
-    </section>
+  <section id="contato">
+    <h2>Contato</h2>
+    <p>📱 WhatsApp: (xx) xxxxx-xxxx</p>
+    <p>📧 E-mail: seuemail@email.com</p>
+    <p>📸 Instagram: @seuusuario</p>
+  </section>
 
-    <script>// Efeito de rolagem suave para as seções
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    });
-    </script>
+  <footer>
+    <p>© 2025 - Stephanie</p>
+  </footer>
 </body>
 </html>
