@@ -1,0 +1,673 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: sans-serif;
+}
+
+/* ------Reset e configurações globais------ */
+:root {
+    --bg-nave-Bar-claro: #FF0000;
+    --bg-nave-Bar-escuro: #000000;
+    --bg-branco:#FFFFFF;
+    --cor-branco-gelado: #F8F8FF;
+    --bg-cor-cinza-claro: #D3D3D3;
+    --bg-cor-verde-floresta:#228B22;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+}
+/* ------Navegação------ */
+#barra-nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar {
+    background-image: linear-gradient(to right, var(--bg-nave-Bar-claro), var(--bg-nave-Bar-escuro));
+    padding: 0 !important;
+}
+
+.navbar-brand img {
+    height: 40px;
+    padding-left: 20px;
+}
+
+.navbar-nav li {
+    padding: 0 10px;
+}
+
+.navbar-nav li a {
+    color: var(--cor-branco-gelado) !important;
+    font-weight: 600;
+    float: right;
+    text-align: left;
+}
+
+.fa-bars {
+    color: var(--cor-branco-gelado);
+    font-size: 30px !important;
+}
+
+.navbar-toggler {
+    outline: none !important;
+}
+
+nav ul li a {
+    color: var(--cor-branco-gelado);
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: var(--cor-branco-gelado);
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* ------Banner------ */
+#banner {
+    background-image: linear-gradient(to right, var(--bg-nave-Bar-claro), var(--bg-nave-Bar-escuro));
+    color: var(--cor-branco-gelado);
+    padding-top: 5%;
+}
+
+#banner a {
+    color: var(--cor-branco-gelado);
+    text-decoration: none;
+}
+
+.titulo_promo {
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 100;
+}
+
+.botao_play {
+    width: 45px;
+    margin: 20px;
+}
+
+.img-baixa {
+    width: 100%;
+}
+/* ------Sobre Nós------ */
+#sobre {
+    background: var(--bg-branco);
+    padding: 50px 0;
+}
+
+#sobre .titulo{
+    font-size: 2.5em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.sobre-texto {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: var(--bg-nave-Bar-escuro);
+}
+
+.sobre-texto strong {
+    color:var(--bg-nave-Bar-claro);
+}
+
+#sobre .btn-primary {
+    background: var(--bg-cor-verde-floresta);
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    transition: background 0.3s ease;
+}
+
+#sobre .btn-primary:hover {
+    background: var(--bg-nave-Bar-escuro);
+}
+
+/* ------Seção de Serviços------ */
+#servicos {
+    padding: 80px 0;
+    background:var(--bg-branco);
+    color: var(--bg-nave-Bar-escuro);
+}
+
+#servicos .titulo {
+    font-size: 2.5em;
+    font-weight: 600;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+.box {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background: rgba(0, 0, 0, 0.0);
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 20px auto;
+}
+
+.box::before {
+    content: '';
+    position: absolute;
+    inset: -10px 140px;
+    background: linear-gradient(315deg, #FFD700, #FF0000);
+    transition: 0.5s;
+    animation: animate 4s linear infinite;
+}
+
+.box:hover::before {
+    inset: -20px 0px;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.box::after {
+    content: '';
+    position: absolute;
+    inset: 6px;
+    background: var(--bg-nave-Bar-escuro);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.content {
+    position: absolute;
+    inset: 10px;
+    border: 6px solid #000000;
+    z-index: 3;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.content img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+    pointer-events: none;
+    z-index: 3;
+}
+
+.box:hover .content img {
+    opacity: 0;
+}
+
+.content h2 {
+    position: relative;
+    font-size: 1.5em;
+    color: var(--bg-branco);
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.content h2 span {
+    font-weight: 300;
+    font-size: 0.75em;
+}
+
+.content a {
+    position: relative;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: var(--bg-branco);
+    color: #070a1c;
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.content a:hover {
+    letter-spacing: 0.2em;
+    background:var(--bg-cor-verde-floresta);
+    color: var(--cor-branco-gelado);
+}
+
+/* ---------------- clientes -------------- */
+#clientes {
+    background-color: var(--bg-branco);
+    margin: 50px 0;
+}
+
+#clientes .titulo{
+    font-size: 2.5em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.clientes {
+    border-left: 4px solid var(--cor-traco-titulo);
+    margin: 50px 0;
+}
+.clientes img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    margin: 0 10px;
+}
+.cargo-cliente {
+    display: inline-block;
+    font-size: 12px;
+}
+
+/* ------Redes Sociais - Estilo Neon------ */
+
+#social .titulo{
+    font-size: 2.5em;
+    font-weight: 600;
+    text-transform: uppercase;
+
+}
+.social-ico {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+}
+    
+
+.social-link.neon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--bg-cor-verde-floresta);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: 0.5s;
+
+}
+
+.social-link.neon i {
+    font-size: 1.8em;
+    color: var(--bg-branco);
+    z-index: 1;
+}
+
+.social-link.neon::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #f31212, #000000);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.social-link.neon:hover::before {
+    opacity: 1;
+    animation: neon-pulse 1.5s infinite;
+}
+
+.social-link.neon:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(0, 204, 255, 0.5);
+}
+
+@keyframes neon-pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+/* ------Rodapé------ */
+#rodape {
+    background-image: linear-gradient(to right, var(--bg-nave-Bar-claro), var(--bg-nave-Bar-escuro));
+    color: var(--bg-branco);
+    padding: 50px 0;
+}
+
+.rodape-caixa {
+    padding: 20px;
+    text-align: center;
+}
+
+.rodape-caixa img {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    background-color:rgba(0, 0, 0, 0.932);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    backdrop-filter: blur(10px);
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: var(--bg-nave-Bar-claro);
+    text-align: center;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    font-size: 16px;
+    background: transparent;
+    color: var(--bg-nave-Bar-claro);
+}
+
+.contact-form textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.contact-form button {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-right: 2px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    color: var(--bg-nave-Bar-escuro);
+    font-size: 20px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: background 0.3s ease;
+}
+
+.contact-form button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.contact-form button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: 0.5s;
+}
+
+.contact-form button:hover::after {
+    left: 100%;
+}
+
+.contact-form button span {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    height: 3px;
+    background: rgb(0, 238, 255);
+    border-radius: 2000px / 50px;
+    box-shadow:
+        0 0 10px #0ef,
+        0 0 20px #0ef,
+        0 0 40px #0ef,
+        0 0 80px #0ef;
+}
+
+.contact-form button span::before {
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 3px;
+    background: #0ef;
+    border-radius: 2000px / 50px;
+    box-shadow:
+        0 0 10px #0ef,
+        0 0 20px #0ef,
+        0 0 40px #0ef,
+        0 0 80px #0ef;
+}
+
+.contact-form button span::after {
+    content: '';
+    position: absolute;
+    bottom: 53px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    height: 3px;
+    background: #0ef;
+    border-radius: 2000px / 50px;
+    box-shadow:
+        0 0 10px #0ef,
+        0 0 20px #0ef,
+        0 0 40px #0ef,
+        0 0 80px #0ef;
+}
+
+.contact-form button span:nth-child(2) {
+    position: absolute;
+    top: 50%;
+    left: 8px;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 40px;
+    border-radius: 40px / 2000px;
+}
+
+.contact-form button span:nth-child(2)::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 277px;
+    transform: translateY(-50%);
+    width: 2.5px;
+    height: 40px;
+    border-radius: 40px / 2000px;
+}
+.copy {
+    width: 100%; 
+    text-align: center; 
+    padding: 20px 0; 
+    background-color: rgba(0, 0, 0, 0.2); /* Fundo semi-transparente (opcional) */
+    margin-top: auto;
+}
+
+.copy p {
+    margin: 0; 
+    font-size: 14px; 
+    color: #fff; /* Cor do texto */
+}
+
+/* Estilo para a seção "Os Barbeiros */
+#barbeiros {
+    padding: 50px 0;
+    background-color: var(--bg-branco);
+}
+
+#barbeiros .titulo {
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+#barbeiros .servicos {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color:var(--bg-branco);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+#barbeiros .servicos:hover {
+    transform: translateY(-10px);
+}
+
+/* Estilo para o card dos barbeiros */
+.barbeiro-card {
+    text-align: center;
+}
+
+.barbeiro-img {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+.barbeiro-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.barbeiro-img:hover img {
+    transform: scale(1.1); 
+}
+
+/* Estilo para o texto dos barbeiros */
+#barbeiros h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--bg-nave-Bar-escuro);
+    margin-bottom: 15px;
+}
+
+#barbeiros p {
+    font-size: 1rem;
+    color: var(--bg-nave-Bar-escuro);
+    margin-bottom: 20px;
+}
+
+/* Estilo para o formulário de agendamento */
+.agendamento {
+    margin-top: 20px;
+}
+
+.agendamento .formulario {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid rgb(255, 234, 234);
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+.agendamento select.formulario {
+    appearance: none;
+    background-color: rgb(255, 255, 255);
+}
+
+.agendamento .btn-custom {
+    background: linear-gradient(45deg, #2E8B57, #000000); /* Gradiente vermelho para preto */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff; /* Cor do texto branco para contrastar */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.agendamento .btn-custom:hover {
+    background: linear-gradient(45deg, #000000, #FF0000); /* Inverte o gradiente ao passar o mouse */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.agendamento .btn-custom:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 8px rgba(255, 247, 247, 0.2);
+}
+    /* Estilo para o efeito neon nas imagens da galeria */
+    .galeria-img {
+        width: 100%;
+        height: auto;
+        border: 5px solid transparent;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        border-radius: 10px;
+    }
+
+    .galeria-img:hover {
+        border-color: #000000;
+        box-shadow: 0 0 10px #800020, 0 0 20px #800020, 0 0 40px #800020;
+    }
+
+    /*Ferramenta Libra*/
+    .vw-access-button {
+        background-color: #007bff; /* Cor de fundo */
+        color: white; /* Cor do ícone */
+        border-radius: 50%; /* Botão redondo */
+        padding: 10px;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1000;
+    }

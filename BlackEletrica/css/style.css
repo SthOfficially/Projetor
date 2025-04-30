@@ -1,0 +1,326 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    color: #000;
+    animation: fadeIn 2s ease-out;
+}
+
+/* Animação de fade-in para o corpo */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Navegação */
+.navbar {
+    background: linear-gradient(to right, #000000, #000000);
+    padding: 10px 20px;
+    animation: slideIn 1s ease-out;
+}
+
+/* Animação de slide-in para a navegação */
+@keyframes slideIn {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(0); }
+}
+
+/* Logo da marca */
+.navbar-brand img {
+    height: 50px;
+}
+
+/* Links do menu */
+.navbar-light .navbar-nav .nav-link {
+    color: #f39c12;
+    margin-right: 15px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+/* Hover nos links */
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #ffffff;
+}
+
+/* Botão hamburguer (menu mobile) */
+.navbar-toggler {
+    border: none;
+    background: none;
+    outline: none;
+    background-color: #000000;
+}
+
+/* Ícone do botão hamburguer */
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23ffffff' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    transition: all 0.3s ease;
+}
+
+/* Quando passar o mouse no botão hamburguer */
+.navbar-toggler:hover .navbar-toggler-icon {
+    filter: brightness(1.5);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23f39c12' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Menu mobile */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background: #000000;
+        padding: 10px;
+    }
+}
+.navbar-toggler {
+    background: #f39c12; /* Fundo preto no botão hamburguer */
+}
+
+/* Banner */
+#banner {
+    display: flex;
+    background: linear-gradient(135deg, #f39c12 50%, #000000 50%);
+    color: #ffffff;
+    padding: 80px 0;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid #f39c12; /* Linha de separação */
+    overflow: hidden; /* Para esconder a parte do brilho que sai do banner */
+}
+
+/* Efeito de luz irradiando da parte preta (lado direito) */
+#banner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0.1) 100%);
+    z-index: 0;
+    animation: luzLampada 3s infinite ease-in-out;
+}
+
+/* Animação da luz irradiando de forma suave */
+@keyframes luzLampada {
+    0% {
+        transform: scale(1);
+        opacity: 0.2;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.2;
+    }
+}
+
+/* Título do Banner */
+.titulo_promo {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    transition: text-shadow 0.3s ease, color 0.3s ease;
+}
+
+/* Efeito de brilho no título ao passar o mouse */
+.titulo_promo:hover {
+    text-shadow: 0 0 10px #f39c12, 0 0 20px #f39c12, 0 0 30px #f39c12, 0 0 40px #e67e22;
+    color: #f39c12; /* Altera a cor do texto para dourado ou outra cor brilhante */
+}
+
+/* Botão dentro do Banner */
+#banner a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #000;
+    color: #ffffff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s, box-shadow 0.3s;
+    z-index: 1;
+}
+
+/* Efeito Hover no Botão */
+#banner a:hover {
+    background: #e67e22;
+    box-shadow: 0 0 15px #f39c12, 0 0 25px #e67e22, 0 0 35px #f39c12;
+}
+
+/* Sobre */
+#sobre {
+    padding: 80px 0;
+    background-color: #e0e0e0;
+    border-bottom: 2px solid #f39c12;
+    animation: fadeIn 2s ease-out;
+}
+
+#sobre .titulo {
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/* Serviços */
+#servicos {
+    padding: 80px 0;
+    background-color: #e0e0e0;
+    border-bottom: 2px solid #f39c12;
+}
+
+#servicos .titulo {
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.box {
+    background: #000;
+    color: white;
+    padding: 30px 20px;
+    border-radius: 10px;
+    margin: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: fadeInBox 1s ease-out;
+}
+
+/* Animação de fade-in para as caixas de serviço */
+@keyframes fadeInBox {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.5);
+}
+
+/* Redes Sociais */
+#social {
+    padding: 60px 0;
+    background: linear-gradient(to right, #434343, #000000);
+    color: white;
+}
+
+#social .titulo {
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.social-ico {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    color: #000;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.social-link:hover {
+    background: #f39c12;
+    color: #fff;
+    transform: scale(1.2);
+    box-shadow: 0 0 10px #f39c12;
+}
+
+/* Rodapé */
+#rodape {
+    background-color: #e0e0e0;
+    color: #000;
+    padding: 60px 0 20px;
+    position: absolute;
+}
+
+/* Rodapé - Caixa */
+#rodape {
+    background-color: #e0e0e0;
+    color: #000;
+    padding: 60px 0 20px;
+    position: relative;
+}
+
+.rodape-img {
+    width: 100%;
+    position: absolute;
+    top: -60px;
+    left: 0;
+}
+
+.rodape-caixa {
+    margin-bottom: 30px;
+}
+
+.rodape-caixa img {
+    width: 20%;
+    margin: 0 auto;
+    display: block;
+}
+
+.rodape-caixa p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.copy p {
+    margin: 0; 
+    font-size: 14px; 
+    color: #000000; /* Cor do texto */
+    text-align: center;
+    margin-top: 20px; /* Espaço entre o texto e a imagem */
+}
+/* Navbar */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    font-size: 30px; /* Tamanho maior para o nome */
+    font-weight: bold;
+    color: #f39c12;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    justify-content: space-between;
+}
+
+/* Nome */
+.navbar-brand .nome {
+    margin-right: 10px; /* Espaço entre o nome e o ícone */
+}
+
+/* Ícone (lâmpada) */
+.navbar-brand i {
+    margin-left: 10px;
+    color: #f39c12; /* Cor dourada normal */
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+/* Efeito de brilho no texto e no ícone ao passar o mouse */
+.navbar-brand:hover {
+    color: #ffffff; /* Muda a cor do texto para branco */
+    text-shadow: 0 0 10px #f39c12, 0 0 20px #f39c12, 0 0 30px #f39c12;
+}
+
+.navbar-brand:hover i {
+    color: #ffffff; /* Muda a cor da lâmpada para branco */
+    text-shadow: 0 0 10px #f39c12, 0 0 20px #f39c12, 0 0 30px #f39c12;
+}
