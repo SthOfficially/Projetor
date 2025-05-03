@@ -13,3 +13,7 @@ const observer = new IntersectionObserver((entries) => {
 sections.forEach(section => {
   observer.observe(section);
 });
+const menuToggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('nav');
+const links = document.querySelectorAll('nav ul li a');
+const sectionsToScroll = document.querySelectorAll('section[id]');
