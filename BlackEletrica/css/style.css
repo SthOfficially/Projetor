@@ -34,7 +34,10 @@ body {
 
 /* Logo da marca */
 .navbar-brand img {
-    height: 50px;
+    height: 50px; /* Altura da logo */
+    width: auto; /* Largura automática para manter a proporção */
+    margin-right: 10px; /* Espaço entre a logo e o nome */
+    transition: transform 0.3s ease;   
 }
 
 /* Links do menu */
@@ -258,6 +261,9 @@ body {
     color: #000;
     padding: 60px 0 20px;
     position: relative;
+    overflow: hidden; /* Para esconder a parte do brilho que sai do rodapé */
+    border-top: 2px solid #f39c12; /* Linha de separação */
+    animation: fadeIn 2s ease-out;
 }
 
 .rodape-img {
@@ -265,22 +271,37 @@ body {
     position: absolute;
     top: -60px;
     left: 0;
+    z-index: -1;
+    opacity: 0.5; /* Opacidade para dar um efeito de fundo */
+    animation: fadeIn 2s ease-out;
 }
 
 .rodape-caixa {
     margin-bottom: 30px;
+    padding: 20px;
+    background: #000; /* Fundo preto para as caixas */
+    color: #fff; /* Texto branco */
+    border-radius: 10px;
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: fadeInBox 1s ease-out;
 }
 
 .rodape-caixa img {
     width: 20%;
     margin: 0 auto;
     display: block;
+    border-radius: 50%; /* Para deixar a imagem redonda */
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .rodape-caixa p {
     font-size: 1.2rem;
     margin-top: 10px;
     text-align: center;
+    color: #fff; /* Texto branco */
+    transition: color 0.3s;
 }
 
 .copy p {
@@ -289,6 +310,7 @@ body {
     color: #000000; /* Cor do texto */
     text-align: center;
     margin-top: 20px; /* Espaço entre o texto e a imagem */
+    transition: color 0.3s;
 }
 /* Navbar */
 .navbar-brand {
@@ -312,15 +334,21 @@ body {
     margin-left: 10px;
     color: #f39c12; /* Cor dourada normal */
     transition: color 0.3s, text-shadow 0.3s;
+    font-size: 1.5rem; /* Tamanho do ícone */
+    text-shadow: 0 0 5px #f39c12, 0 0 10px #f39c12, 0 0 15px #f39c12; /* Efeito de brilho normal */
+    animation: glow 1.5s infinite alternate; /* Animação de brilho suave */
 }
 
 /* Efeito de brilho no texto e no ícone ao passar o mouse */
 .navbar-brand:hover {
     color: #ffffff; /* Muda a cor do texto para branco */
     text-shadow: 0 0 10px #f39c12, 0 0 20px #f39c12, 0 0 30px #f39c12;
+    transform: scale(1.05); /* Aumenta o tamanho do texto ao passar o mouse */
 }
 
 .navbar-brand:hover i {
     color: #ffffff; /* Muda a cor da lâmpada para branco */
-    text-shadow: 0 0 10px #f39c12, 0 0 20px #f39c12, 0 0 30px #f39c12;
+    text-shadow: 0 0 10px #f39c12, 0 0 20px #f39c12, 0 0 30px #f39c12; /* Efeito de brilho no ícone */
+    transform: rotate(360deg); /* Rotaciona o ícone ao passar o mouse */
+    animation: none; /* Para parar a animação de brilho ao passar o mouse */
 }

@@ -1,15 +1,6 @@
-const sections = document.querySelectorAll('section');
+const menuToggle = document.getElementById('menu-toggle');
+const navList = document.getElementById('nav-list');
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('show');
-    }
-  });
-}, {
-  threshold: 0.1
-});
-
-sections.forEach(section => {
-  observer.observe(section);
+menuToggle.addEventListener('click', () => {
+  navList.classList.toggle('show');
 });

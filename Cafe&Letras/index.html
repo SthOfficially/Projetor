@@ -1,44 +1,67 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Café & Letras</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="CSS/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="CSS/style.css" />
+  <script src="https://kit.fontawesome.com/f267bbc3d3.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <header>
-    <h1>Café & Letras</h1>
-    <p>Um espaço para quem ama histórias — no papel e na xícara.</p>
+    <nav class="navbar">
+      <h1 class="logo">Café & Letras</h1>
+      <div class="menu-toggle" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul class="nav-list" id="nav-list">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#livros">Livros</a></li>
+        <li><a href="#galeria">Galeria</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+    <p class="slogan">Um espaço para quem ama histórias — no papel e na xícara.</p>
   </header>
 
   <section id="sobre">
     <h2>Sobre Nós</h2>
-    <p>O Café & Letras nasceu do amor pelos livros e pela boa companhia de um café quentinho. Nosso espaço foi pensado para acolher leitores, escritores, estudantes e sonhadores — gente que encontra nas palavras um lar, e no café, uma pausa gostosa.</p>
+    <p>O Café & Letras nasceu do amor pelos livros e pela boa companhia de um café quentinho. Um lugar para leitores, escritores, estudantes e sonhadores.</p>
   </section>
 
   <section id="livros">
     <h2>Livros & Sabores</h2>
-    <p>Encontre uma seleção especial de livros: clássicos, poesias, romances, infantis e muito mais. Acompanhe com cafés especiais, chás, bolos caseiros e quitutes fresquinhos!</p>
+    <p>Seleção especial de livros: clássicos, poesias, romances. Acompanhe com cafés especiais, bolos e quitutes fresquinhos!</p>
   </section>
 
   <section id="galeria">
     <h2>Galeria</h2>
     <div class="galeria">
-      <img src="https://source.unsplash.com/400x300/?coffee,book" alt="Café e livro">
-      <img src="https://source.unsplash.com/400x300/?bookstore,reading" alt="Leitura">
-      <img src="https://source.unsplash.com/400x300/?cafe,interior" alt="Interior do café">
+      <img src="https://source.unsplash.com/400x300/?coffee,book" alt="Café e livro" />
+      <img src="https://source.unsplash.com/400x300/?bookstore,reading" alt="Leitura" />
+      <img src="https://source.unsplash.com/400x300/?cafe,interior" alt="Interior do café" />
     </div>
   </section>
 
   <section id="contato">
     <h2>Onde Estamos</h2>
-    <p>📍 Rua das Palavras, 123 – Centro Literário<br>
-    📞 (00) 90000-0000<br>
-    📩 contato@cafeeletras.com<br>
-    📸 @cafeeletras<br>
-    🕰️ De segunda a sábado, das 9h às 19h</p>
+    <p>📍 Rua das Palavras, 123 – Centro Literário<br />
+       📞 (00) 90000-0000<br />
+       📩 contato@cafeeletras.com<br />
+       📸 @cafeeletras<br />
+       🕰️ Segunda a sábado, 9h às 19h</p>
+
+    <div class="social-links">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-whatsapp"></i></a>
+      <a href="#"><i class="fab fa-tiktok"></i></a>
+    </div>
+
+    <div class="mapa">
+      <iframe src="https://www.google.com/maps/embed?pb=YOUR_GOOGLE_MAPS_LINK" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
   </section>
 
   <footer>
