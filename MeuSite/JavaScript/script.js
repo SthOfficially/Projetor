@@ -1,19 +1,21 @@
+const hamburguer = document.getElementById('hamburguer');
+const menu = document.getElementById('menu');
+
+hamburguer.addEventListener('click', () => {
+  hamburguer.classList.toggle('active');
+  menu.classList.toggle('show');
+});
+
+// Animação ao rolar
 const sections = document.querySelectorAll('section');
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('show');
+function mostrarSecao() {
+  const gatilho = window.innerHeight * 0.85;
+  sections.forEach(sec => {
+    const topo = sec.getBoundingClientRect().top;
+    if (topo < gatilho) {
+      sec.classList.add('show');
     }
   });
-}, {
-  threshold: 0.1
-});
-
-sections.forEach(section => {
-  observer.observe(section);
-});
-const menuToggle = document.querySelector('.menu-toggle');
-const nav = document.querySelector('nav');
-const links = document.querySelectorAll('nav ul li a');
-const sectionsToScroll = document.querySelectorAll('section[id]');
+}
+window.addEventListener('scroll', mostrarSecao);
