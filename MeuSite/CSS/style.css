@@ -53,6 +53,11 @@ header h1 {
   flex-direction: column;
   cursor: pointer;
   z-index: 1001;
+  margin-left: auto;
+  margin-right: 20px;
+  padding: 10px;
+  background-color: #4a90e2;
+  border-radius: 5px;
 }
 
 .hamburguer span {
@@ -92,6 +97,7 @@ header h1 {
     padding: 20px;
     border-radius: 10px;
     animation: slideDown 0.3s ease forwards;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
 
   .menu a {
@@ -134,6 +140,7 @@ h2 {
   color: #4a90e2;
 }
 
+/* Home */
 #home {
   display: flex;
   flex-wrap: wrap;
@@ -206,6 +213,18 @@ h2 {
 #contato p {
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
+  color: #333;
+  font-weight: 300;
+  line-height: 1.5;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #333;
 }
 
 /* Rodapé */
@@ -214,8 +233,69 @@ footer {
   color: white;
   text-align: center;
   padding: 2rem;
+  padding: 0 20px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 footer p {
   font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  font-weight: 300;
+  line-height: 1.5;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #fff;
+  margin: 0 auto;
+}
+
+/* Ícones redes sociais */
+.redes-sociais {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: #333;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.redes-sociais a {
+  color: white;
+  margin: 0 10px;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: #333;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 20px
+}
+
+.redes-sociais a:hover {
+  color: #ffcc00;
+}
+/* Efeitos de transição */
+section.show {
+  opacity: 1;
+  transform: translateY(0);
 }
