@@ -276,17 +276,46 @@ body {
     animation: fadeIn 2s ease-out;
 }
 
+/* Efeito de brilho no rodapé */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+/* Rodapé - Caixa */
 .rodape-caixa {
-    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: 20px;
-    background: #000; /* Fundo preto para as caixas */
+    background-color: #000; /* Fundo preto */
     color: #fff; /* Texto branco */
     border-radius: 10px;
+    margin: 20px auto; /* Centraliza a caixa */
+    width: 80%; /* Largura da caixa */
     box-shadow: 0px 8px 20px rgba(0,0,0,0.5);
     transition: transform 0.3s, box-shadow 0.3s;
-    animation: fadeInBox 1s ease-out;
 }
-
+/* Efeito de hover na caixa do rodapé */
+.rodape-caixa:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.7);
+}
+/* Efeito de brilho na imagem do rodapé */
+.rodape-caixa:hover img {
+    transform: scale(1.1); /* Aumenta a imagem ao passar o mouse */
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.7);
+}
+/* Efeito de brilho no texto do rodapé */
+.rodape-caixa:hover p {
+    color: #f39c12; /* Muda a cor do texto para dourado */
+    text-shadow: 0 0 10px #f39c12, 0 0 20px #f39c12, 0 0 30px #f39c12;
+}
+/* Efeito de brilho no texto do rodapé */
+.rodape-caixa:hover .copy p {
+    color: #f39c12; /* Muda a cor do texto para dourado */
+    text-shadow: 0 0 10px #f39c12, 0 0 20px #f39c12, 0 0 30px #f39c12;
+}
 .rodape-caixa img {
     width: 20%;
     margin: 0 auto;
@@ -302,6 +331,7 @@ body {
     text-align: center;
     color: #fff; /* Texto branco */
     transition: color 0.3s;
+
 }
 
 .copy p {
