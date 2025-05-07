@@ -11,6 +11,7 @@ body {
   line-height: 1.6;
   background: #fdfcf9;
   color: #333;
+  overflow-x: hidden;
 }
 
 /* Estilo do cabeçalho */
@@ -20,19 +21,21 @@ header {
   padding: 20px;
   text-align: center;
   position: relative;
-  animation: fadeDown 1s ease-in-out; /* animação ao carregar */
+  animation: fadeDown 1s ease-in-out;
 }
 
 /* Logo estilizado */
 .logo {
   font-family: 'Playfair Display', serif;
   font-size: 2.5rem;
+  animation: slideInLeft 1s ease-in-out;
 }
 
 /* Slogan abaixo da logo */
 .slogan {
   font-size: 1rem;
   margin-top: 10px;
+  animation: slideInRight 1s ease-in-out;
 }
 
 /* Navbar com espaçamento entre logo e links */
@@ -56,8 +59,8 @@ header {
   transition: color 0.3s;
 }
 
-/* Hover dos links */
-.nav-list li a:hover {
+.nav-list li a:hover,
+.nav-list li a:focus {
   color: #ffd700;
 }
 
@@ -75,38 +78,32 @@ section {
   animation: fadeUp 1s ease-in;
 }
 
+/* Conteúdo interno da seção com entrada animada */
+section h2,
+section p {
+  animation: fadeIn 1.2s ease-in;
+}
+
 /* Galeria de imagens responsiva */
 .galeria {
   display: flex;
   gap: 10px;
   justify-content: center;
   flex-wrap: wrap;
-
 }
 
-/* Imagens com efeito hover */
+/* Imagens com efeito hover e animação ao carregar */
 .galeria img {
   width: 300px;
   border-radius: 8px;
   transition: transform 0.4s ease, opacity 0.4s;
-  animation: zoomIn 0.8s ease; /* nova animação */
-  animation-delay: 0.5s; /* atraso na animação */
-  animation-fill-mode: forwards; /* mantém o estado final da animação */
-  animation-duration: 0.5s; /* duração da animação */
-  animation-timing-function: ease-in-out; /* função de tempo da animação */
+  animation: zoomIn 0.8s ease;
 }
 
+/* Hover das imagens */
 .galeria img:hover {
   transform: scale(1.05);
   opacity: 0.9;
-  animation: zoomIn 0.8s ease; /* nova animação */
-  animation-delay: 0.5s; /* atraso na animação */
-  animation-fill-mode: forwards; /* mantém o estado final da animação */
-  animation-duration: 0.5s; /* duração da animação */
-  animation-timing-function: ease-in-out; /* função de tempo da animação */
-  animation-name: zoomIn; /* nome da animação */
-  animation-iteration-count: 1; /* número de vezes que a animação será executada */
-  animation-direction: normal; /* direção da animação */
 }
 
 /* Ícones de redes sociais com animação */
@@ -116,13 +113,30 @@ section {
   color: #4b2e2e;
   transition: transform 0.3s, color 0.3s;
   animation: popUp 1s ease forwards;
-  animation-delay: 0.5s; /* atraso na animação */
-  animation-fill-mode: forwards; /* mantém o estado final da animação */
+  animation-delay: 0.5s;
 }
 
 .social-links a:hover {
   transform: scale(1.2);
   color: #d28c3b;
+}
+
+/* Botões animados (caso use no site) */
+button, .btn {
+  background-color: #4b2e2e;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+  animation: fadeUp 1s ease-in;
+}
+
+button:hover, .btn:hover {
+  background-color: #d28c3b;
+  transform: scale(1.05);
 }
 
 /* Rodapé */
@@ -134,7 +148,8 @@ footer {
   animation: fadeUp 1s ease-in;
 }
 
-/* Animação fadeDown para o header */
+/* Animações */
+/* Fade de cima para baixo */
 @keyframes fadeDown {
   from {
     opacity: 0;
@@ -146,7 +161,7 @@ footer {
   }
 }
 
-/* Animação fadeUp para seções */
+/* Fade de baixo para cima */
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -158,7 +173,17 @@ footer {
   }
 }
 
-/* NOVA animação para imagens */
+/* Fade simples */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Zoom suave */
 @keyframes zoomIn {
   from {
     transform: scale(0.9);
@@ -170,7 +195,7 @@ footer {
   }
 }
 
-/* NOVA animação para ícones */
+/* Pop-up suave */
 @keyframes popUp {
   0% {
     transform: scale(0.5);
@@ -178,6 +203,30 @@ footer {
   }
   100% {
     transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Slide da esquerda */
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Slide da direita */
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
     opacity: 1;
   }
 }
@@ -203,202 +252,7 @@ footer {
     display: block;
   }
 }
-/* Reset básico e configuração inicial */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-/* Estilização do corpo da página */
-body {
-  font-family: 'Roboto', sans-serif;
-  line-height: 1.6;
-  background: #fdfcf9;
-  color: #333;
-}
-
-/* Estilo do cabeçalho */
-header {
-  background: #4b2e2e;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-  position: relative;
-  animation: fadeDown 1s ease-in-out; /* animação ao carregar */
-}
-
-/* Logo estilizado */
-.logo {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.5rem;
-}
-
-/* Slogan abaixo da logo */
-.slogan {
-  font-size: 1rem;
-  margin-top: 10px;
-}
-
-/* Navbar com espaçamento entre logo e links */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* Lista de navegação */
-.nav-list {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-/* Links da navegação */
-.nav-list li a {
-  text-decoration: none;
-  color: #fff;
-  transition: color 0.3s;
-}
-
-/* Hover dos links */
-.nav-list li a:hover {
-  color: #ffd700;
-}
-
-/* Ícone do menu para mobile */
-.menu-toggle {
-  display: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
-/* Seções com espaçamento e animação de entrada */
-section {
-  padding: 50px 20px;
-  text-align: center;
-  animation: fadeUp 1s ease-in;
-}
-
-/* Galeria de imagens responsiva */
-.galeria {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-/* Imagens com efeito hover */
-.galeria img {
-  width: 300px;
-  border-radius: 8px;
-  transition: transform 0.4s ease, opacity 0.4s;
-  animation: zoomIn 0.8s ease; /* nova animação */
-}
-
-.galeria img:hover {
-  transform: scale(1.05);
-  opacity: 0.9;
-}
-
-/* Ícones de redes sociais com animação */
-.social-links a {
-  font-size: 1.8rem;
-  margin: 10px;
-  color: #4b2e2e;
-  transition: transform 0.3s, color 0.3s;
-  animation: popUp 1s ease forwards;
-  animation-delay: 0.5s; /* atraso na animação */
-  animation-fill-mode: forwards; /* mantém o estado final da animação */
-  animation-duration: 0.5s; /* duração da animação */
-  animation-timing-function: ease-in-out; /* função de tempo da animação */
-  animation-name: popUp; /* nome da animação */
-  animation-iteration-count: 1; /* número de vezes que a animação será executada */
-}
-
-.social-links a:hover {
-  transform: scale(1.2);
-  color: #d28c3b;
-}
-
-/* Rodapé */
-footer {
-  background: #4b2e2e;
-  color: #fff;
-  text-align: center;
-  padding: 15px;
-  animation: fadeUp 1s ease-in;
-}
-
-/* Animação fadeDown para o header */
-@keyframes fadeDown {
-  from {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Animação fadeUp para seções */
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* NOVA animação para imagens */
-@keyframes zoomIn {
-  from {
-    transform: scale(0.9);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-/* NOVA animação para ícones */
-@keyframes popUp {
-  0% {
-    transform: scale(0.5);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-  .nav-list {
-    display: none;
-    flex-direction: column;
-    background-color: #4b2e2e;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    width: 200px;
-    padding: 10px;
-  }
-
-  .nav-list.show {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-}
 /* Responsividade para a galeria */
 @media (max-width: 600px) {
   .galeria img {
