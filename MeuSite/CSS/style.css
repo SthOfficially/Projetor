@@ -7,10 +7,19 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #f4f4f4;
+  background-color: white;
   color: #222;
   scroll-behavior: smooth;
 }
+
+/* Logo no cabeçalho */
+.logo img {
+  height: 50px;
+  width: auto;
+  margin-right: 20px;
+  transition: transform 0.3s ease;
+}
+
 
 /* Cabeçalho */
 header {
@@ -18,7 +27,8 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: #6a0dad; /* Roxo */
+  background-color: #8A2BE2; /* Azul-violeta */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   color: white;
   position: sticky;
   top: 0;
@@ -56,7 +66,8 @@ header h1 {
   margin-left: auto;
   margin-right: 20px;
   padding: 10px;
-  background-color: #6a0dad; /* Roxo */
+  background-color: #8A2BE2; /* Azul-violeta */
+  border: none;
   border-radius: 5px;
 }
 
@@ -201,12 +212,14 @@ h2 {
 .projeto a {
   text-decoration: none;
   color: #00bfff; /* Azul elétrico */
+  display: block;
+  font-size: 1.2rem;
   font-weight: bold;
   transition: color 0.3s ease;
 }
 
 .projeto a:hover {
-  color: #ccff00; /* Verde-limão */
+  color: #77DD77; /* Verde claro */
 }
 
 /* Contato */
@@ -221,11 +234,16 @@ h2 {
   padding: 0 20px;
   text-align: center;
   font-family: 'Roboto', sans-serif;
+  background-color: white; /* Branco */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
 }
 
 /* Rodapé */
 footer {
-  background-color: #6a0dad; /* Roxo */
+  background-color: #8A2BE2; /* Azul-violeta */
   color: white;
   text-align: center;
   padding: 2rem;
@@ -259,14 +277,16 @@ footer p {
   align-items: center;
   gap: 20px;
   padding: 20px;
-  background-color: #222;
+  background-color: #00bfff; /* Azul elétrico */
+  color: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease;
 }
 
 .redes-sociais a {
-  color: white;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
   margin: 0 10px;
   font-size: 1.5rem;
   transition: color 0.3s ease;
@@ -274,7 +294,8 @@ footer p {
   display: inline-block;
   padding: 10px;
   border-radius: 50%;
-  background-color: #222;
+  background-color: #87CEFA; /* Azul claro */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 40px;
   height: 40px;
   text-align: center;
@@ -282,7 +303,10 @@ footer p {
 }
 
 .redes-sociais a:hover {
-  color: #ccff00; /* Verde-limão */
+  color: #77DD77; /* Verde claro */
+  background-color: #fff; /* Branco */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
 }
 
 /* Efeitos de transição */
