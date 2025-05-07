@@ -7,8 +7,8 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #f8f8f8;
-  color: #333;
+  background-color: #f4f4f4;
+  color: #222;
   scroll-behavior: smooth;
 }
 
@@ -18,7 +18,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: #4a90e2;
+  background-color: #6a0dad; /* Roxo */
   color: white;
   position: sticky;
   top: 0;
@@ -44,7 +44,7 @@ header h1 {
 }
 
 .menu a:hover {
-  color: #ffcc00;
+  color: #ccff00; /* Verde-limão */
 }
 
 /* Menu Hamburguer */
@@ -56,7 +56,7 @@ header h1 {
   margin-left: auto;
   margin-right: 20px;
   padding: 10px;
-  background-color: #4a90e2;
+  background-color: #6a0dad; /* Roxo */
   border-radius: 5px;
 }
 
@@ -93,7 +93,7 @@ header h1 {
     position: absolute;
     top: 70px;
     right: 20px;
-    background-color: #333;
+    background-color: #222;
     padding: 20px;
     border-radius: 10px;
     animation: slideDown 0.3s ease forwards;
@@ -137,7 +137,7 @@ section.show {
 h2 {
   font-size: 2.5rem;
   margin-bottom: 2rem;
-  color: #4a90e2;
+  color: #00bfff; /* Azul elétrico */
 }
 
 /* Home */
@@ -200,36 +200,32 @@ h2 {
 
 .projeto a {
   text-decoration: none;
-  color: #4a90e2;
+  color: #00bfff; /* Azul elétrico */
   font-weight: bold;
   transition: color 0.3s ease;
 }
 
 .projeto a:hover {
-  color: #ff6f61;
+  color: #ccff00; /* Verde-limão */
 }
 
 /* Contato */
 #contato p {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   margin-bottom: 0.5rem;
-  color: #333;
-  font-weight: 300;
+  color: #222;
+  font-weight: 400;
   line-height: 1.5;
   max-width: 600px;
   margin: 0 auto;
   padding: 0 20px;
   text-align: center;
   font-family: 'Roboto', sans-serif;
-  font-size: 1.2rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #333;
 }
 
 /* Rodapé */
 footer {
-  background-color: #4a90e2;
+  background-color: #6a0dad; /* Roxo */
   color: white;
   text-align: center;
   padding: 2rem;
@@ -244,21 +240,15 @@ footer {
 }
 
 footer p {
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
-  color: #fff;
-  font-weight: 300;
+  font-size: 1.2rem;
+  font-weight: 400;
   line-height: 1.5;
+  color: #fff;
   max-width: 600px;
   margin: 0 auto;
   padding: 0 20px;
   text-align: center;
   font-family: 'Roboto', sans-serif;
-  font-size: 1.2rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #fff;
-  margin: 0 auto;
 }
 
 /* Ícones redes sociais */
@@ -269,7 +259,7 @@ footer p {
   align-items: center;
   gap: 20px;
   padding: 20px;
-  background-color: #333;
+  background-color: #222;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease;
@@ -284,18 +274,25 @@ footer p {
   display: inline-block;
   padding: 10px;
   border-radius: 50%;
-  background-color: #333;
+  background-color: #222;
   width: 40px;
   height: 40px;
   text-align: center;
-  line-height: 20px
+  line-height: 20px;
 }
 
 .redes-sociais a:hover {
-  color: #ffcc00;
+  color: #ccff00; /* Verde-limão */
 }
+
 /* Efeitos de transição */
 section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Efeitos de transição para o cabeçalho */
+header.show {
   opacity: 1;
   transform: translateY(0);
 }
