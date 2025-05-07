@@ -1,15 +1,20 @@
-const sections = document.querySelectorAll('section');
+// Animação ao rolar
+window.addEventListener('scroll', () => {
+  document.querySelectorAll('section').forEach(sec => {
+    const top = window.scrollY;
+    const offset = sec.offsetTop - 400;
+    const height = sec.offsetHeight;
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('show');
+    if (top >= offset && top < offset + height) {
+      sec.classList.add('show');
     }
   });
-}, {
-  threshold: 0.1
 });
 
-sections.forEach(section => {
-  observer.observe(section);
+// Menu hambúrguer
+const toggle = document.querySelector(".menu-toggle");
+const navList = document.querySelector(".nav-list");
+
+toggle.addEventListener("click", () => {
+  navList.classList.toggle("show");
 });

@@ -1,20 +1,30 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Açaí & Alegria</title>
-  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="CSS/style.css" />
+  <script src="https://kit.fontawesome.com/f267bbc3d3.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <header>
-    <h1>Açaí & Alegria</h1>
-    <p>O sabor que refresca o corpo e alegra a alma!</p>
+    <nav class="navbar">
+      <h1 class="logo">Açaí & Alegria</h1>
+      <div class="menu-toggle" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul class="nav-list" id="nav-list">
+        <li><a href="#about">Cardápio</a></li>
+        <li><a href="#gallery">Galeria</a></li>
+        <li><a href="#location">Localização</a></li>
+      </ul>
+    </nav>
+    <p class="slogan">O sabor que refresca o corpo e alegra a alma!</p>
   </header>
 
   <section id="about">
     <h2>Nosso Cardápio</h2>
-    <p>Escolha o seu tamanho preferido:</p>
     <ul>
       <li>🥣 300ml – R$10,00</li>
       <li>🥣 400ml – R$12,00</li>
@@ -22,7 +32,7 @@
       <li>🥣 700ml – R$17,00</li>
       <li>🥣 1 Litro – R$22,00</li>
     </ul>
-    <p><strong>Monte o seu com os melhores acompanhamentos:</strong></p>
+    <p><strong>Acompanhamentos:</strong></p>
     <ul>
       <li>🍌 Banana</li>
       <li>🍓 Morango</li>
@@ -40,24 +50,46 @@
   <section id="gallery">
     <h2>Galeria Deliciosa</h2>
     <div class="gallery">
-      <img src="https://via.placeholder.com/300x200.png?text=Açaí+1" alt="Açaí 1">
-      <img src="https://via.placeholder.com/300x200.png?text=Açaí+2" alt="Açaí 2">
-      <img src="https://via.placeholder.com/300x200.png?text=Açaí+3" alt="Açaí 3">
+      <img src="Imagens/ACAÍ NA PRATICA.jpg" alt="Açaí 1" />
+      <img src="Imagens/baixados.jpg" alt="Açaí 2" />
+      <img src="Imagens/fotos fake de açaí.jpg" alt="Açaí 3" />
     </div>
   </section>
 
   <section id="location">
     <h2>Onde Estamos</h2>
-    <p><strong>Endereço:</strong> Avenida Tropical, 987 – Bairro do Sol, Cidade Saborosa</p>
+    <p><strong>Endereço:</strong> Avenida Tropical, 987 – Bairro do Sol</p>
     <p><strong>Telefone:</strong> (00) 98888-0000</p>
-    <p><strong>Email:</strong> <a href="mailto:contato@acaialegria.com">contato@acaialegria.com</a></p>
-    <p><strong>Instagram:</strong> @acai_e_alegria</p>
+    <p><strong>Email:</strong> contato@acaialegria.com</p>
     <p><strong>Horário:</strong> Todos os dias, das 10h às 22h</p>
+
+    <div class="mapa">
+      <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <div class="social-links">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-whatsapp"></i></a>
+      <a href="#"><i class="fab fa-tiktok"></i></a>
+    </div>
   </section>
 
   <footer>
     <p>&copy; 2025 Açaí & Alegria | Todos os direitos reservados</p>
   </footer>
+
+  <!-- Acessibilidade VLibras -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
 
   <script src="JavaScript/script.js"></script>
 </body>

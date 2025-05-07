@@ -134,6 +134,10 @@ ul li {
   gap: 1.5rem;
   padding: 2rem;
   margin: 0 auto;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
   max-width: 1200px;
 }
 
@@ -167,6 +171,13 @@ ul li {
   justify-content: center;
   align-items: center;
   gap: 20px;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 2rem auto;
+  transition: all 0.3s ease;
 }
 
 .social-links a {
@@ -174,10 +185,23 @@ ul li {
   color: #9b59b6;
   text-decoration: none;
   transition: color 0.3s;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background-color: #f4e9fc;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
 .social-links a:hover {
-  color: #f39c12;
+  color: #77DD77;
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(144, 89, 202, 0.3);
+  background-color: #fff;
 }
 
 /* Rodapé */
@@ -237,7 +261,8 @@ footer {
 }
 
 #location h2 {
-  color: #7c3aad;
+  color: #924db3;
+  font-size: 2.5rem;
   font-size: 2.2rem;
   margin-bottom: 1.5rem;
 }
