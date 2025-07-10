@@ -382,3 +382,64 @@ body {
     transform: rotate(360deg); /* Rotaciona o ícone ao passar o mouse */
     animation: none; /* Para parar a animação de brilho ao passar o mouse */
 }
+
+/* Animação de brilho suave */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #f39c12, 0 0 10px #f39c12, 0 0 15px #f39c12;
+    }
+    100% {
+        text-shadow: 0 0 20px #f39c12, 0 0 30px #f39c12, 0 0 40px #f39c12;
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 24px; /* Tamanho menor para telas pequenas */
+    }
+    .navbar-brand i {
+        font-size: 1.2rem; /* Tamanho menor para o ícone */
+    }
+    #banner .titulo_promo {
+        font-size: 2rem; /* Tamanho menor do título no banner */
+    }
+}
+
+/* Ajustes para o rodapé */
+#rodape {
+    padding: 40px 0;
+    text-align: center;
+}
+
+/* Ajustes para a imagem do rodapé */
+.rodape-img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: -60px;
+    left: 0;
+    z-index: -1;
+    opacity: 0.5; /* Opacidade para dar um efeito de fundo */
+}
+
+.navbar {
+  position: fixed; /* fixa no topo */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #000; /* ou seu background */
+  padding: 10px 20px;
+  z-index: 9999; /* fica acima de todo conteúdo */
+}
+
+/* Para não esconder o conteúdo que vem logo abaixo da navbar */
+body {
+  padding-top: 70px; /* ajuste esse valor conforme a altura da navbar */
+}
+
+/* Ajustes para o banner */
+#banner {
+    padding: 100px 20px; /* Aumenta o padding para dar mais espaço */
+    text-align: center; /* Centraliza o texto */
+}
